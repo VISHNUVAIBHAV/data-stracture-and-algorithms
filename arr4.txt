@@ -1,0 +1,54 @@
+import java.util.Scanner;
+public class arr4 
+{
+
+	public static void main(String[] args) 
+	{
+
+		Scanner sc =new Scanner(System.in);
+		int en=0;
+		int on=0;
+		int pos=0;
+		int neg=0;
+		int zero=0;
+		System.out.println("enter size of array");
+		int size=sc.nextInt();
+		int a[]=new int[size];
+		for(int i=0;i<a.length;i++) 
+		{
+			System.out.println("enter elements of array");
+			a[i]=sc.nextInt();
+		}
+		for(int i=0;i<a.length;i++) 
+		{
+			System.out.print(a[i]+" ");
+			
+		}
+		for(int i=0;i<a.length;i++) 
+		{
+
+			if(a[i]>0) 
+			{
+				pos++;
+			}
+			if(a[i]<0) 
+			{
+				neg++;
+			}
+			if(a[i]==0)
+			{
+				zero++;
+			}
+			if(a[i]%2==0) 
+			{
+				en++;
+			}
+			else 
+			{
+				on++;
+			}
+		}
+		System.out.println("odd numbers="+on+"/ even numbers="+en+"/positive numbers="+pos+" /negativenumbers="+neg+" /zeros="+zero);
+		
+	}
+}
