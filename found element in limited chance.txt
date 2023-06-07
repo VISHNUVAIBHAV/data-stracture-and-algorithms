@@ -1,0 +1,69 @@
+package practice;
+
+import java.util.Scanner;
+
+public class arr7 {
+
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter size");
+		int size=sc.nextInt();
+		int arr[]=new int[size];
+		System.out.println("enter array element");
+		for(int i=0;i<arr.length;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.println(arr[i]);
+		}
+		int count=0;
+		
+		int atm=0;
+		int chance=0;
+		
+		while(atm<3)
+		{
+			System.out.println("enter search element");
+			int b=sc.nextInt();
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i]==b)
+			{
+				count++;
+				break;
+			}
+		
+		}
+		if(count>0)
+		{
+			break;
+		}
+		atm++;
+		chance++;
+		}
+		if(count>0)
+		{
+			if(chance==0)
+			{
+				System.out.println("item found in 1st chance");
+			}
+			else if(chance==1) 
+			{
+				System.out.println("item found in 2nd chance");
+			}
+			else 
+			{
+				System.out.println("item found in 3rd chance");
+			}
+		}
+		if(count==0)
+		{
+			System.out.println("your limit crossed, not found");
+		}
+	}
+
+}
