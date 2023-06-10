@@ -1,0 +1,27 @@
+package leet_code_arrays;
+
+import java.util.Scanner;
+
+public class fibno {
+
+	public static void main(String[] args) 
+	{
+		//0,1,1,2,3,5
+		
+		int count=2, a=0, b=1; 
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter requierd fibnocci number");
+		int fib=sc.nextInt();
+		
+		while(count<=fib)
+		{
+			int c=a+b;
+			
+			a=b;
+			b=c;
+			count++;
+			//System.out.println(c);
+		}
+		System.out.println("fibonacci of "+fib+" is "+b);
+	}
+}
