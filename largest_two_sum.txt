@@ -1,0 +1,42 @@
+package leet_code_arrays;
+
+public class largest_two_sum
+{
+
+    public static void main(String[] args) 
+    {
+    	int a[]= {-1,0,8,2,3,9,-2};
+    	int b[]=new int[a.length];
+    	int temp;
+    	
+    	for(int i=0;i<a.length;i++) 
+    	{
+    		b[i]=a[i];
+    	}
+    	
+    	for(int i=0;i<a.length;i++)
+    	{
+    		for(int j=i+1;j<a.length;j++)
+    		{
+    			if(a[i]>a[j])
+    			{
+    				temp=a[j];
+    				a[j]=a[i];
+    				a[i]=temp;
+    			}
+    		}
+    	}
+    	
+    	int c=a[a.length-1];
+    	int d=a[a.length-2];
+    	
+    	for(int i=0;i<a.length;i++) 
+    	{
+    		if(b[i]==c||b[i]==d)
+    		{
+    			System.out.println(i);
+    		}
+    	}
+    }
+}
+ 
