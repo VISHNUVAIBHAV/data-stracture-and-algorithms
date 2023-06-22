@@ -1,0 +1,132 @@
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$ git status
+On branch developer1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fibnocci.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$ git status
+On branch developer1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fibnocci.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$ git add fibnocci.txt
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$ git status
+On branch developer1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   fibnocci.txt
+
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$ git commit -m "com fib"
+[developer1 a471ca4] com fib
+ 1 file changed, 27 insertions(+)
+ create mode 100644 fibnocci.txt
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$ git push
+fatal: The current branch developer1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin developer1
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$ git push --set-upstream origin developer1
+To https://github.com/VISHNUVAIBHAV/data-stracture-and-algorithms.git
+ ! [rejected]        developer1 -> developer1 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/VISHNUVAIBHAV/data-stracture-and-algorithms.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> developer1
+
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$  git branch --set-upstream-to=origin/<branch> developer1
+bash: branch: No such file or directory
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$  git branch --set-upstream-to=developer1
+warning: not setting branch 'developer1' as its own upstream
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$ git stash
+No local changes to save
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$ git pull https://github.com/VISHNUVAIBHAV/data-stracture-and-algorithms.git developer1
+From https://github.com/VISHNUVAIBHAV/data-stracture-and-algorithms
+ * branch            developer1 -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> developer1
+
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$ git status
+On branch developer1
+nothing to commit, working tree clean
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$ git push
+fatal: The current branch developer1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin developer1
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$  git push --set-upstream origin developer1
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (17/17), 2.94 KiB | 1004.00 KiB/s, done.
+Total 17 (delta 5), reused 1 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/VISHNUVAIBHAV/data-stracture-and-algorithms.git
+   e284aac..638bcff  developer1 -> developer1
+branch 'developer1' set up to track 'origin/developer1'.
+
+user@DESKTOP-2LP901D MINGW64 ~/Desktop/dsa/data-stracture-and-algorithms (developer1)
+$

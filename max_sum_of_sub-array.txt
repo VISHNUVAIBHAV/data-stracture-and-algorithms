@@ -1,0 +1,33 @@
+package with_parameters;
+
+public class kadenes_algo {
+
+	public static void main(String[] args) 
+	{
+		int []arr= {1,-2,3,4,-7,5};
+		
+		//kadenes_algo k=new kadenes_algo();
+		int result=k_algo(arr);
+		System.out.println(result);
+	}
+		
+	 static int k_algo(int a[])
+	{
+		int cur_sum=0;
+		int lar_sum=0;
+		
+		for(int i=0;i<a.length;i++)
+		{
+			cur_sum=cur_sum+a[i];
+			if(lar_sum<cur_sum)
+			{
+				lar_sum=cur_sum;
+			}
+		     if(cur_sum<0)
+		     {
+		    	 cur_sum=0;
+		     }
+		}
+		return lar_sum;
+	}
+}
