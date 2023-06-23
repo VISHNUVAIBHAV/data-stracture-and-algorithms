@@ -1,0 +1,36 @@
+package with_parameters;
+
+import java.util.Arrays;
+
+public class anagram 
+{
+
+	public static void main(String[] args) 
+	{
+		String s1="listen";
+		String s2="silent";
+		
+		boolean result=anagram(s1,s2);
+		System.out.println(result);
+	}
+	
+	static boolean anagram (String a,String b)
+	{
+		char[] aa = a.toCharArray();
+		char[] ab = b.toCharArray();
+		
+		Arrays.sort(aa); 
+		Arrays.sort(ab); 
+		
+		for(int i=0;i<aa.length;i++)
+		{
+			if(aa[i]!=ab[i])
+			{
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+}
